@@ -1,0 +1,42 @@
+Live/Dead Plant Image Thresholding filter
+Code for Python 2.7 by D. Patrick Bastedo, 2018.
+
+Dependencies:
+
+Matplotlib
+Numpy
+
+
+Usage:
+
+Case A - Convert any image in the same folder using either the default (log-
+transformed) red/green threshold or one specified by the user.
+
+e.g.
+
+python live_dead_filter.py input.png
+
+or
+
+python live_dead_filter.py input.png thresh -0.075
+
+
+Case B - test alternative parameter values
+
+This scenario produces a series of derivative images (including isolated red, green, 
+and blue pixel channels, a histogram of log-transformed red/green ratio values, a 
+representation of the red/green critical range, and grayscale-masked output) for a 
+default input file (included as sample_input.png) or any alternative image specified
+as an argument when calling the script, as indicated below.
+
+e.g.
+
+python live_dead_filter.py test_params input alt_input.png thresh -0.08 test_range 0.2 
+
+or
+
+python live_dead_filter.py test_params test_range 0.2
+
+or
+
+python live_dead_filter.py test_params alt_input.png thresh -0.08
